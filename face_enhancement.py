@@ -5,12 +5,12 @@
 import cv2
 import time
 import numpy as np
-import __init_paths
-from face_detect.retinaface_detection import RetinaFaceDetection
-from face_parse.face_parsing import FaceParse
-from face_model.face_gan import FaceGAN
-from sr_model.real_esrnet import RealESRNet
-from align_faces import warp_and_crop_face, get_reference_facial_points
+import GPEN.__init_paths
+from GPEN.face_detect.retinaface_detection import RetinaFaceDetection
+from GPEN.face_parse.face_parsing import FaceParse
+from GPEN.face_model.face_gan import FaceGAN
+from GPEN.sr_model.real_esrnet import RealESRNet
+from GPEN.align_faces import warp_and_crop_face, get_reference_facial_points
 
 class FaceEnhancement(object):
     def __init__(self, args, base_dir='./', in_size=512, out_size=None, model=None, use_sr=True, device='cuda'):
